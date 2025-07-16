@@ -210,7 +210,7 @@ Content:
 }
 ```
 
-## Post Theme
+## PostItem Theme
 Creates new Theme with the first post of the author and returns the theme as json.
 
 ### URL --> ```/themes```
@@ -222,7 +222,7 @@ Creates new Theme with the first post of the author and returns the theme as jso
 ```
 {
     "themeName": "Some Theme Title",
-    "postText": "Some Post text"
+    "postText": "Some PostItem text"
 }
 ```
 
@@ -260,8 +260,8 @@ Content:
 }
 ```
 
-## Create Post
-Creates new Post of the author and returns the theme as json.
+## Create PostItem
+Creates new PostItem of the author and returns the theme as json.
 
 ### URL --> ```/themes/:themeId```
 
@@ -271,7 +271,7 @@ Creates new Post of the author and returns the theme as json.
 
 ```
 {
-    "postText": "Some Post text"
+    "postText": "Some PostItem text"
 }
 ```
 
@@ -311,8 +311,8 @@ Content:
 
 * ```/themes/:themeId/posts/:postId```
 
-## Edit Post
-Edit Post if the user is the author of the post and returns the changed post.
+## Edit PostItem
+Edit PostItem if the user is the author of the post and returns the changed post.
 
 ### URL --> ```/themes/:themeId/posts/:postId```
 
@@ -364,8 +364,8 @@ Content:
 }
 ```
 
-## Delete Post
-Deletes Post if the user is the author of the post and returns the deleted post.
+## Delete PostItem
+Deletes PostItem if the user is the author of the post and returns the deleted post.
 
 ### URL --> ```/themes/:themeId/posts/:postId```
 
@@ -408,7 +408,7 @@ Content:
     message: "Something went wrong!"
 }
 ```
-## Like Post
+## Like PostItem
 Adds like to the post.
 
 ### URL --> ```/likes/:postId```
@@ -441,25 +441,25 @@ Content:
 
 
 <!-- users
-.post /register - register new user
-.post /login - login user
-.post /logout - logout user
+.post-item /register - register new user
+.post-item /login - login user
+.post-item /logout - logout user
 
 .get /profile - get user info
-.post /profile - post user info
+.post-item /profile - post-item user info
 .put /profile - edit user info
 
 themes
 .get /themes - lists all themes
-.post /themes - create new theme only for registered users
+.post-item /themes - create new theme only for registered users
 
 posts:
 .get themes/id - get all posts for theme
-.post themes/id - create post in theme by id only for registered users
-.put themes/id/posts/id - edit post only possible for author
-.delete themes/id/posts/id - delete post only possible for author -->
+.post-item themes/id - create post-item in theme by id only for registered users
+.put themes/id/posts/id - edit post-item only possible for author
+.delete themes/id/posts/id - delete post-item only possible for author -->
 
 
 <!-- http://localhost:3000/api/users/register --  {"name":"SomeName","email":"some@email.com","username":"someUsername","password":"12345","rePassword":"12345"} -->
-<!--http://localhost:3000/api/themes -- {"themeName":"Some Theme", "userId":"5f85bf709a517d36f4abe656", "post": "Some Post" } -->
-<!-- http://localhost:3000/api/themes/5f858dd2d895ad23602db9d4  -- {"userId":"5f8580d25d1da62568dd38fd", "postText": "Some Post textsdfasdf" } -->
+<!--http://localhost:3000/api/themes -- {"themeName":"Some Theme", "userId":"5f85bf709a517d36f4abe656", "post-item": "Some PostItem" } -->
+<!-- http://localhost:3000/api/themes/5f858dd2d895ad23602db9d4  -- {"userId":"5f8580d25d1da62568dd38fd", "postText": "Some PostItem textsdfasdf" } -->

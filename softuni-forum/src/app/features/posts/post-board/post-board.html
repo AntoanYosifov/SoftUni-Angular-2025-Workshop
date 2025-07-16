@@ -1,0 +1,10 @@
+<div class="aside">
+    <h2 class="title">
+        Recent posts
+    </h2>
+    <div>
+        @for (postItem of posts; track postItem.id) {
+            <app-post-item [post]="postItem"></app-post-item>
+        }
+    </div>
+</div>
